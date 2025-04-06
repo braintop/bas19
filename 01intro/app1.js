@@ -19,6 +19,15 @@ console.log(y1)
 
 let t1 = Math.floor(Math.random() * 100)  // 0 - 100
 console.log(t1)
+//כתוב תכנית הקולות שני מספרים רנדומלים ומדפיסה את סכומם 
+let num1 = Math.floor(Math.random()*100)
+let num2 = Math.floor(Math.random()*100)
+let solution = num1 + num2 
+console.log(solution)
+console.log("num1 + num2 = " + solution)
+console.log(num1 + "+" + num2 + "="  + solution)
+
+
 
 
 
