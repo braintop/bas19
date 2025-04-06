@@ -14,3 +14,12 @@ console.log(firstname + " is "+ age + " years old")
 let x1 = Math.random()//random number 0 - 1 
 console.log(x1)
 
+let y1 = Math.random() * 100 // 0 - 100
+console.log(y1)
+
+let t1 = Math.floor(Math.random() * 100)  // 0 - 100
+console.log(t1)
+
+
+
+
