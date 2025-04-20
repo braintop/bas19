@@ -1,7 +1,4 @@
 
-let arr = [] // empty array 
-
-
             //  0  1   2 3
 let numbers  = [1,301,40,5] 
 console.log(numbers[0]) // 2 
