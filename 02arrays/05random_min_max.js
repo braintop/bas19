@@ -17,3 +17,5 @@ if (min1 > max1) {
     min1 = temp
 }
 let number2 = min1 + Math.floor(Math.random() * (max - min))
+
+
