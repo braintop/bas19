@@ -1,7 +1,7 @@
 
             //  0  1   2 3
 let numbers  = [1,301,40,5] 
-console.log(numbers[0]) // 2 
+console.log(numbers[0]) // 1 
 console.log(numbers[3]) //5 
 
 if(numbers[0]==numbers[3]){
