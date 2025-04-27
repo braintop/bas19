@@ -17,11 +17,11 @@ function compareSum(arr1, arr2) {
     for (let i = 0; i < arr2.length; i++) {
         sum2 += arr2[i]
     }
-    if(sum1>sum2) return 1; 
-    else if(sum1<sum2) return 2; 
+    if (sum1 > sum2) return 1;
+    else if (sum1 < sum2) return 2;
     return 0
 }
-let numbers1 = [1, 4, 5,6]
+let numbers1 = [1, 4, 5, 6]
 let numbers2 = [10, 4, 5, 6, 100, 200, 300]
 let solution = compareSum(numbers1, numbers2)
 console.log(solution)
