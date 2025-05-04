@@ -42,11 +42,10 @@ f(name){
    let str =""
    for(let i=0;i<name.length;i++){
     str = str + name[i] + name[i]
-
    }
    return str 
-
 }
+
 7
 
 בדיקת מספר חיובי זוגי
@@ -68,4 +67,14 @@ f(name){
 כתוב פונקציה שמקבלת מספר ומחזירה את סכום הספרות שלו.
 לדוגמה: 123 → 6
 הפעל עם: 481.
+
+
+function sumDigits(num){
+    let sum = 0 
+    while(num!=0){
+        sum = sum + num%10 
+        num = Math.floor(num/10)
+    }
+    return sum 
+}
 
