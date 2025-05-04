@@ -41,7 +41,7 @@
 f(name){
    let str =""
    for(let i=0;i<name.length;i++){
-    str = str + name[i] + name[i]
+    str = m + name[i] + name[i]
    }
    return str 
 }
@@ -58,7 +58,7 @@ f(name){
 בדיקת אם מערך ריק
 
 כתוב פונקציה שמקבלת מערך ומחזירה true אם הוא ריק, אחרת false.
-הפעל עם: [], [0], [5].
+הפעל עם: [], [0]nt, [5].
 
 9
 
@@ -68,7 +68,7 @@ f(name){
 לדוגמה: 123 → 6
 הפעל עם: 481.
 
-
+u
 function sumDigits(num){
     let sum = 0 
     while(num!=0){
