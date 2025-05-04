@@ -11,6 +11,6 @@ function countNumberInArray(numbers, num){
     return count; 
 }
 let numbers = [1, 4, 5,6]
-let solution = countNumberInArray(numbers, 5)
+let solution = countNumberInArray(numbers, 5) // [].indexOf()
 console.log(solution)
 
