@@ -13,3 +13,4 @@ function countNumberInArray(numbers, num){
 let numbers = [1, 4, 5,6]
 let solution = countNumberInArray(numbers, 5)
 console.log(solution)
+
