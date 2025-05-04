@@ -38,6 +38,15 @@
 לדוגמה: "Hi" → "HHii"
 הפעל עם: "Wow".
 
+f(name){
+   let str =""
+   for(let i=0;i<name.length;i++){
+    str = str + name[i] + name[i]
+
+   }
+   return str 
+
+}
 7
 
 בדיקת מספר חיובי זוגי
