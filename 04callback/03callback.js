@@ -16,3 +16,14 @@ compute(sum)
 compute(mult)
 compute(minus)
 
+function randomColor(color1, color2, color3){
+    let num = Math.floor(Math.random()*3)
+    if(num==0) return color1 
+    else if (num==1) return color2 
+    return color3 
+}
+function amazing(paintCallback){
+    let c = paintCallback("red", "green", "yellow") 
+    console.log(c)
+}
+amazing(randomColor)
