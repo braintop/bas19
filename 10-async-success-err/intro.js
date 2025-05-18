@@ -1,7 +1,7 @@
-function f(errorCallback) {
+function f(succsessCallback, errorCallback) {
     setTimeout(() => {
         let index = Math.floor(Math.random() * 10)
-        if (index > 5) return "bigger than 5"
+        if (index > 5) succsessCallback()
         else {
             //throw "less than 5"
             errorCallback() 
@@ -12,8 +12,9 @@ function f(errorCallback) {
 function fireManErrorCallBack(){
     console.log("fire.......")
 }
-function policmanErrorCallBack(){
-    console.log("run away.......")
+function fireManSuccessCallBack(){
+    console.log("success - no fire.......")
 }
-f(fireManErrorCallBack)
+
+f(fireManSuccessCallBack,fireManErrorCallBack)
 console.log("continue")
