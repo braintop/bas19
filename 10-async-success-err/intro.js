@@ -18,3 +18,5 @@ function fireManSuccessCallBack(){
 
 f(fireManSuccessCallBack,fireManErrorCallBack)
 console.log("continue")
+
+//navigator.geolocation.getCurrentPosition()
