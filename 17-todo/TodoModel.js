@@ -1,10 +1,8 @@
 let mongoose = require("mongoose");
 let Schema = mongoose.Schema;
-let PersonSchema = new Schema({
-    firstname: String,
-    lastname: String,
-    city: String,
-    salary: Number,
-    country: String
+let TodoSchema = new Schema({
+    mission: String,
+    description: String,
+    isDone: Number// 0 - not done, 1 done , 2 half done 
 });
-module.exports = mongoose.model('persons', PersonSchema);
+module.exports = mongoose.model('todos', TodoSchema);
