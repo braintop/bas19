@@ -92,7 +92,6 @@ app.delete('/api/v1/todos/:id', async function (req, res, next) {
 
 //====================================Users==============
 
-
 app.post('/api/v1/users', async function (req, res, next) {
     try {
         let p1 = req.body;
@@ -132,7 +131,6 @@ app.get('/api/v1/users/:id', async function (req, res, next) {
         })
     }
 });
-
 
 app.patch('/api/v1/users/:id', async function (req, res, next) {
     try {
