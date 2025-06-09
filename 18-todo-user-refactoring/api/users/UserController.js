@@ -1,7 +1,17 @@
+//1. npm install bcryptjs
+//2. let bcrypt = require('bcryptjs')
+//3. let salt = bcrypt.genSaltSync(12);
+//4. let password = bcrypt.hashSync(req.body.password, salt);
+//5. update req.body.password 
+let bcrypt = require('bcryptjs')
+
 let itemModel = require("./UserModel")
-exports.create = async function (req, res, next) {
+exports.register = async function (req, res, next) {
     try {
+        let salt = bcrypt.genSaltSync(12);
+        let password = bcrypt.hashSync(req.body.password, salt);
         let p1 = req.body;
+        p1.password = password;
         console.log(p1);
         var newItem = await itemModel.create(p1);
         console.log(newItem)
