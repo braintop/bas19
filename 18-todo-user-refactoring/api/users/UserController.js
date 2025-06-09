@@ -1,3 +1,4 @@
+//making register steps  
 //1. npm install bcryptjs
 //2. let bcrypt = require('bcryptjs')
 //3. let salt = bcrypt.genSaltSync(12);
