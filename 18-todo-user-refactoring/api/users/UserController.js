@@ -6,6 +6,8 @@
 //5. update req.body.password 
 let bcrypt = require('bcryptjs')
 let itemModel = require("./UserModel")
+const jwt = require('jsonwebtoken');
+
 exports.register = async function (req, res) {
     try {
         let salt = bcrypt.genSaltSync(12);
@@ -24,27 +26,40 @@ exports.register = async function (req, res) {
 };
 
 exports.login = async function (req, res) {
-    let { email, password } = req.body;//{email:"a@gmail.com", password:"pppp"}
-    if (!email || !password) {
-        res.status(400).json({ login: false, message: "you need email and password" });
+    let { username, password } = req.body;
+    if (!username || !password) {
+        res.status(400).json({ login: false, message: "you need username and password" });
         return;
     }
-    let user = await itemModel.findOne({ email: email })
-    //Stop if there is not user with the given email or password
-    //Find the user with the given email in the db
+    let user = await itemModel.findOne({ username: username })
     if (!user) {
         res.status(401).json({ login: false, message: "No user with the given email" });
         return
     }
-    let answer = bcrypt.compareSync(password, user.password);//return true or false
+    let answer = bcrypt.compareSync(password, user.password);
 
     if (!answer) {
         res.status(401).json({ login: false, message: "Wrong password" });
         return
     }
-    res.json({ login: true, message: "success login" })
-}
 
+    // Generate JWT token
+    const token = jwt.sign(
+        { userId: user._id, username: user.username },
+        'your-secret-key', // In production, use environment variable for this
+        { expiresIn: '24h' }
+    );
+
+    res.json({
+        login: true,
+        message: "success login",
+        token: token,
+        user: {
+            id: user._id,
+            username: user.username
+        }
+    })
+}
 
 exports.get = async function (req, res, next) {
     try {

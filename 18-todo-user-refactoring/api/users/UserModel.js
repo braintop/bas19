@@ -1,6 +1,6 @@
 let mongoose = require('mongoose'); var Schema = mongoose.Schema;
 let UserSchema = new Schema({
-    email: {
+    username: {
         type: String,
         unique: [true, 'please provide email'],
         required: true,
@@ -9,10 +9,8 @@ let UserSchema = new Schema({
     password: {
         type: String,
         required: [true, 'please provide password'],
-        minlength: 6,
+        minlength: 3,
     },
-    firstname: String,
-    lastname: String,
 });
 
 module.exports = mongoose.model('users', UserSchema);
